@@ -1,0 +1,70 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "banco digital",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "saldoBancarioIntent",
+          "slots": [],
+          "samples": [
+            "qual o meu saldo",
+            "qual é o meu saldo ",
+            "qual é o meu saldo bancário",
+            "qual o meu saldo bancário"
+          ]
+        },
+        {
+          "name": "pagementoPeriodoIntent",
+          "slots": [],
+          "samples": [
+            "tenho alguma coisa para pagar hoje",
+            "o que tenho para pagar hoje"
+          ]
+        },
+        {
+          "name": "realizarPagamentoIntent",
+          "slots": [],
+          "samples": [
+            "faça o pagamento da conta de energia",
+            "pagar a conta de energia",
+            "pague a conta de energia"
+          ]
+        },
+        {
+          "name": "volumeVendasIntent",
+          "slots": [],
+          "samples": [
+            "mostre meu volume de vendas em setembro",
+            "qual foi meu volume de vendas em setembro"
+          ]
+        },
+        {
+          "name": "melhorVendedorIntent",
+          "slots": [],
+          "samples": [
+            "quem é meu melhor vendedor",
+            "qual é o meu melhor vendedor"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "8"
+}
