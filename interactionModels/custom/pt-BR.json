@@ -61,10 +61,27 @@
             "quem é meu melhor vendedor",
             "qual é o meu melhor vendedor"
           ]
+        },
+        {
+          "name": "agradeceIntent",
+          "slots": [],
+          "samples": [
+            "agradece a todos",
+            "agradeça a todos"
+          ]
+        },
+        {
+          "name": "pitchIntent",
+          "slots": [],
+          "samples": [
+            "me ajuda fazer o pitch",
+            "me ajude fazer o pitch",
+            "me ajuda a fazer o pitch"
+          ]
         }
       ],
       "types": []
     }
   },
-  "version": "8"
+  "version": "3"
 }

@@ -123,7 +123,7 @@ class melhorVendedorIntent (AbstractRequestHandler):
 
     def handle(self, handler_input):
         
-        speak_output = "Seu melhor vendedor é o Pedro Rosa da empresa Vamos Parcelar"
+        speak_output = "Seu melhor vendedor é o Pedro Rósa da empresa Vamos Parcelar"
         card_text = "\nVendedor: Pedro Rosa\n\n Empresa: Vamos Parcelar"
             
         
@@ -135,7 +135,44 @@ class melhorVendedorIntent (AbstractRequestHandler):
                 .response
         )
 
-melhorVendedorIntent
+
+class agradeceIntent (AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        # type: (HandlerInput) -> bool
+        return ask_utils.is_intent_name("agradeceIntent")(handler_input)
+
+    def handle(self, handler_input):
+        
+        speak_output = "Obrigado pela oportunidade de participar da batalha das startápis."
+        card_text = "Obrigado pela oportunidade de participar da batalha das startups."
+            
+        
+        return (
+            handler_input.response_builder
+                .speak(speak_output)
+                .set_card(StandardCard("Obrigado", card_text,imagem_padrao))
+                .response
+        )
+
+class pitchIntent (AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        # type: (HandlerInput) -> bool
+        return ask_utils.is_intent_name("pitchIntent")(handler_input)
+
+    def handle(self, handler_input):
+        
+        speak_output = "Claro. o Dóti Benk é um banco digital que ajuda empresários a ganharem performance nas rotinas diárias além de pagamentos e recebimentos. com o meu apoio é possível fazer muitas tarefas. podemos ainda utilizar rôbôs para operações, minimizando erros humanos e aumentando a performance da empresa, além das reduções de custo."
+        card_text = "Claro, o Dotbank é um banco digital que ajuda empresários a ganharem performance nas rotinas diárias além de pagamentos e recebimentos, com o meu apoio é possível fazer muitas tarefas, podemos ainda utilizar robôs para operações minimizando erros humanos e aumentando a performance da empresa além das reduções de custo."
+            
+        
+        return (
+            handler_input.response_builder
+                .speak(speak_output)
+                .set_card(StandardCard("Obrigado", card_text,imagem_padrao))
+                .ask("Posso ajudar em mais alguma coisa?")
+                .response
+        )
+
 
 #=========== Classes Padrao ========================
 
@@ -190,11 +227,7 @@ class SessionEndedRequestHandler(AbstractRequestHandler):
 
 
 class IntentReflectorHandler(AbstractRequestHandler):
-    """The intent reflector is used for interaction model testing and debugging.
-    It will simply repeat the intent the user said. You can create custom handlers
-    for your intents by defining them above, then also adding them to the request
-    handler chain below.
-    """
+    
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
         return ask_utils.is_request_type("IntentRequest")(handler_input)
@@ -213,10 +246,7 @@ class IntentReflectorHandler(AbstractRequestHandler):
 
 
 class CatchAllExceptionHandler(AbstractExceptionHandler):
-    """Generic error handling to capture any syntax or routing errors. If you receive an error
-    stating the request handler chain is not found, you have not implemented a handler for
-    the intent being invoked or included it in the skill builder below.
-    """
+    
     def can_handle(self, handler_input, exception):
         # type: (HandlerInput, Exception) -> bool
         return True
@@ -249,6 +279,8 @@ sb.add_request_handler(pagementoPeriodoIntent())
 sb.add_request_handler(realizarPagamentoIntent())
 sb.add_request_handler(volumeVendasIntent())
 sb.add_request_handler(melhorVendedorIntent())
+sb.add_request_handler(agradeceIntent())
+sb.add_request_handler(pitchIntent())
 
 #=========================================
 sb.add_request_handler(HelpIntentHandler())

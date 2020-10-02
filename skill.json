@@ -27,23 +27,23 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "uri": "arn:aws:lambda:us-east-1:459490059175:function:912ddb2b-ab3c-45fe-afac-4375b6c2cbcc:Release_0"
+          "uri": "arn:aws:lambda:us-east-1:285024326439:function:b35b7f4d-973f-434b-b5c9-ac640c1ab45a:Release_0"
         },
         "interfaces": [],
         "regions": {
           "EU": {
             "endpoint": {
-              "uri": "arn:aws:lambda:eu-west-1:459490059175:function:912ddb2b-ab3c-45fe-afac-4375b6c2cbcc:Release_0"
+              "uri": "arn:aws:lambda:eu-west-1:285024326439:function:b35b7f4d-973f-434b-b5c9-ac640c1ab45a:Release_0"
             }
           },
           "NA": {
             "endpoint": {
-              "uri": "arn:aws:lambda:us-east-1:459490059175:function:912ddb2b-ab3c-45fe-afac-4375b6c2cbcc:Release_0"
+              "uri": "arn:aws:lambda:us-east-1:285024326439:function:b35b7f4d-973f-434b-b5c9-ac640c1ab45a:Release_0"
             }
           },
           "FE": {
             "endpoint": {
-              "uri": "arn:aws:lambda:us-west-2:459490059175:function:912ddb2b-ab3c-45fe-afac-4375b6c2cbcc:Release_0"
+              "uri": "arn:aws:lambda:us-west-2:285024326439:function:b35b7f4d-973f-434b-b5c9-ac640c1ab45a:Release_0"
             }
           }
         }
